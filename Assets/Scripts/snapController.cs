@@ -33,7 +33,6 @@ public class SnapController : MonoBehaviour
 
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
-            // Snap immediately
             if (draggable.transform.parent != null)
             {
                 draggable.transform.position = closestSnapPoint.position;
@@ -42,6 +41,7 @@ public class SnapController : MonoBehaviour
             {
                 draggable.transform.localPosition = closestSnapPoint.localPosition;
             }
+            draggable.SetSnapped(); 
         }
     }
 }
