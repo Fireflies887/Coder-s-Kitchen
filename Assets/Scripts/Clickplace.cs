@@ -6,39 +6,69 @@ public class Clickplace : MonoBehaviour
 {
     public Transform cloneObj;
     public int foodValue;
+    public AudioSource KetchupSplat;
+    public static int sortingOrder = 1;
+	private SpriteRenderer sprite;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void playsound(){
+        KetchupSplat.Play();
     }
 
     private void OnMouseDown(){
-        if (gameObject.name=="BotBun")
-        Instantiate(cloneObj, new Vector3(-1.26f, .10f, 0), cloneObj.rotation);
 
-        if (gameObject.name=="TopBun")
-        Instantiate(cloneObj, new Vector3(-1.26f, .60f, 0), cloneObj.rotation);
+        sprite = GetComponent<SpriteRenderer>();
 
-        if (gameObject.name=="ContainerCheese")
-        Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+        if (gameObject.name=="BotBun"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
 
-        if (gameObject.name=="Ketchup_bottle")
-        Instantiate(cloneObj, new Vector3(-1.26f, .64f, 0), cloneObj.rotation);
+        if (gameObject.name=="TopBun"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
+        
+        if (gameObject.name=="ContainerCheese"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
+        
 
-        if (gameObject.name=="Mayo_bottle")
-        Instantiate(cloneObj, new Vector3(-1.26f, .64f, 0), cloneObj.rotation);
+        if (gameObject.name=="Ketchup_bottle"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
 
-        if (gameObject.name=="Lettuce")
-        Instantiate(cloneObj, new Vector3(-1.26f, .64f, 0), cloneObj.rotation);
+        if (gameObject.name=="Mayo_bottle"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
+
+        if (gameObject.name=="Lettuce"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(-1.26f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
 
         Gameflow.plateValue += foodValue;
         Debug.Log(Gameflow.plateValue+" "+Gameflow.orderValue);
+
     }
+    
 }

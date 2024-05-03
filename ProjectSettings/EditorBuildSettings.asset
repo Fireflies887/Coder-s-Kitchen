@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 023abb7dc75c6594196083fbd7a030a9, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6c799738f0934554698bb121ece6c30e, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 760a3c69d8b65914ca6c8d811e32cda9, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 43fb38d320fdb1749a66853db74456d2, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e5498a4ec2f46314f913cf9360123565, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1f775b9683a3c0041b19c7e4cb3b5d91, type: 2}
