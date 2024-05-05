@@ -44,3 +44,6 @@ TagManager:
   - name: Ingredient
     uniqueID: 396469609
     locked: 0
+  - name: Navigation
+    uniqueID: 3233863095
+    locked: 0

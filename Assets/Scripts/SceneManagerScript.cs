@@ -20,18 +20,18 @@ public class SceneManagerScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameObject.name=="compiler_button"){
-            sceneName = "grillScene";
-            OnFadeComplete();
-        }
-
         if (gameObject.name=="grill_button"){
-            sceneName = "grillScene";
+            sceneName = "GrillScene";
             OnFadeComplete();
         }
 
+        if (gameObject.name=="counter_button"){
+            sceneName = "CounterScene";
+            OnFadeComplete();
+        }
+        
         if (gameObject.name=="pattymaker_button"){
-            sceneName = "GrillScene";
+            sceneName = "PattyMakerScene";
             OnFadeComplete();
         }
 

@@ -19,7 +19,7 @@ public class cheeseMove : MonoBehaviour
     }
     IEnumerator meltTimer(){
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.7f);
             spriteRenderer.sprite = snappedSprite;
     }
 }
