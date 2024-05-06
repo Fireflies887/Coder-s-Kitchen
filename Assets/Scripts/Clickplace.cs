@@ -66,6 +66,13 @@ public class Clickplace : MonoBehaviour
             playsound();
         }
 
+        if (gameObject.name=="spaceBR"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
+
         Gameflow.plateValue += foodValue;
         Debug.Log(Gameflow.plateValue+" "+Gameflow.orderValue);
 
