@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 4f9275ea1657d294495f0edcf05d5ead
   - enabled: 1
-    path: Assets/Scenes/Compiler.unity
+    path: Assets/Scenes/CompilerScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
     path: Assets/Scenes/GrillScene.unity
     guid: 6be4ab6f57dcf5d42add6179f5c6d1c6
+  - enabled: 1
+    path: Assets/Scenes/CounterScene.unity
+    guid: 349ec07c721a0e0468befc62a5a39a4d
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 023abb7dc75c6594196083fbd7a030a9, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6c799738f0934554698bb121ece6c30e, type: 2}

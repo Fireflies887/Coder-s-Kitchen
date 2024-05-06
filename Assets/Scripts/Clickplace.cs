@@ -24,21 +24,21 @@ public class Clickplace : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
 
         if (gameObject.name=="BotBun"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
         }
 
         if (gameObject.name=="TopBun"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
         }
         
         if (gameObject.name=="ContainerCheese"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
@@ -46,21 +46,28 @@ public class Clickplace : MonoBehaviour
         
 
         if (gameObject.name=="Ketchup_bottle"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
         }
 
         if (gameObject.name=="Mayo_bottle"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
         }
 
         if (gameObject.name=="Lettuce"){
-            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, .62f, 0), cloneObj.rotation);
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
+            sortingOrder++;
+            newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+            playsound();
+        }
+
+        if (gameObject.name=="spaceBR"){
+            Transform newObj = Instantiate(cloneObj, new Vector3(0.03f, 3, 0), cloneObj.rotation);
             sortingOrder++;
             newObj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             playsound();
