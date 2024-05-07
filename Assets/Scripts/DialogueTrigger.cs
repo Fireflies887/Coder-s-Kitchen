@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class DialogueTrigger : MonoBehaviour
@@ -17,7 +18,7 @@ public class DialogueTrigger : MonoBehaviour
             {
                 ("You", "I can't believe this is happening...", "", false, false, ""),
                 ("Yuu-ri", "Don't worry!", "yuuri_worried", false, false, "worried"),
-                ("Yuu-ri", "I'm sure there's a solution to this...", "yuuri_explaining", false, false, "explaining"),
+                ("Yuu-ri", "I'm sure there's a solution to this...", "yuuri_worried", false, false, "worried"),
                 (" ", "Your family runs a restaurant known for its unique burgers.", "", false, false,""),
                 (" ", "But over time, the restaurant is drowning in debt.","", false, false,""),
                 (" ", "With your family's lack of funds, the restaurant is doomed to shut down.","",false, false,""),
@@ -54,19 +55,20 @@ public class DialogueTrigger : MonoBehaviour
                 ("Mr. Mercado", "It took years of hard work, and here I am now.","man_openmouth", false, false,"openmouth"),
                 ("Mr. Mercado", "I want to repay the warmth your mother gave me. That's why I'm here.","man_neutral",false,false,"neutral"),
                 ("Yuu-ri", "Oh, what a touching story! Miss May is truly an angel!","yuuri_tearful", false, false, "tearful"),
-                ("You", "sobs","",false,false,""),
+                ("You", "sobs","",false, false,""),
                 ("Mr. Mercado", "Haha, I adore her for that.","man_openmouth", false, false, "neutral"),
                 ("Mr. Mercado", "Well, let's get down to business.","man_neutral", false, false,"neutral"),
                 ("Mr. Mercado", "What had happened that made this restaurant downhill?","man_frowning", false, false,"frowning"),
                 ("Yuu-ri", "Oh, allow me to explain!","yuuri_worried", false, true, "worried"),
+                (" ", "Yuu-ri then gave a brief explanation to Mr. Mercado", "", false, true, ""),
                 ("Yuu-ri", "That's the gist of it!", "yuuri_neutral", true, false, "neutral"),
                 ("Mr. Mercado", "Hm, your family simply needs to adapt to market changes.","man_neutral",false,false,"neutral"),
                 ("Mr. Mercado", "Why not innovate and transform creative ideas into new solutions that can drive growth and efficiency?","man_openmouth",false,false,"openmouth"),
                 ("You", "Yuu-ri, translate to monkey language.","",false,false,""),
                 ("Yuu-ri", "Don't worry! I took note of this in my data.", "yuuri_thinking", false, false, "thinking"),
-                ("Yuu-ri", "Oh, allow me to explain!", "yuuri_explaining", false, false, "explaining"),
-                ("Yuu-ri", "Basically, we need a well planned strategy to run the place!", "yuuri_neutral", false, false, "neutral"),
-                ("Mr. Mercado", "Mhm. The question is, how can we use innovation to our advantage?","man_neutral",false,false,"neutral"),
+                ("Yuu-ri", "Oh, allow me to explain!", "yuuri_explaining", true, false, "explaining"),
+                ("Yuu-ri", "Basically, we need a well planned strategy to run the place!", "yuuri_neutral", false, true, "neutral"),
+                ("Mr. Mercado", "Mhm. The question is, how can we use innovation to our advantage?","man_neutral",false, false,"neutral"),
                 ("Mr. Mercado", "We are, after all in the advanced era.","man_openmout", false, false,"openmouth"),
                 ("Yuu-ri", "Hmm...", "yuuri_thinking", false, false,"thinking"),
                 ("Yuu-ri", "Oh! Why don't we incorporate technology into cooking?","yuuri_explaining", false, false, "explaining"),
@@ -89,7 +91,14 @@ public class DialogueTrigger : MonoBehaviour
                 ("You", "I-I'll try my best!","",false,false,""),
                 ("Yuu-ri", "Don't worry! I'll help you be familiar with all of it!", "yuuri_explaining", false, false,"explaining")
             };
+
             dialogueManager.StartDialogue(dialogue);
+
         }
+    }
+    void EndDialogue()
+    {
+        Debug.Log("End of Conversation");
+        SceneManager.LoadScene("PattyMakerScene");
     }
 }
