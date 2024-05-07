@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class manmotion : MonoBehaviour
+public class Customer2Dialogue : MonoBehaviour
 {
-    public GameObject man;
+    public GameObject man2;
     [SerializeField] Sprite newSprite;
     SpriteRenderer spriteRenderer;
     int count = 0;
     void Start()
     {
-        spriteRenderer = man.GetComponent<SpriteRenderer>();
+        spriteRenderer = man2.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = null;
     }
 
@@ -20,7 +20,7 @@ public class manmotion : MonoBehaviour
         // transform.Translate(new Vector2(1, 0) * Time.deltaTime);
         count++;
 
-        if (count > 550)
+        if (count > 850)
         {
             spriteRenderer.sprite = newSprite;
         }
