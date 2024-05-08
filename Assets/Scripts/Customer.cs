@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    private Vector3 targetPosition = new Vector3(-1, -1, 0);
+    public Vector3 targetPosition = new Vector3(-1, -1, 0);
     public float movementSpeed = 5f;
     public bool enable = false;
+
 
     
 
