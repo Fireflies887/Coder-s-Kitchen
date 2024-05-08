@@ -14,9 +14,9 @@ TagManager:
   - Ingredients
   - 
   - 
-  - 
+  - Customer
   - Navigation
-  - 
+  - BlackScreen
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Customer
+    uniqueID: 328350823
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -20,6 +20,11 @@ public class SceneManagerScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (gameObject.name=="play_button"){
+            sceneName = "Story";
+            OnFadeComplete();
+        }
+
         if (gameObject.name=="grill_button"){
             sceneName = "GrillScene";
             OnFadeComplete();
