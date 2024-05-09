@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour, IDropHandler
+public class Slot : MonoBehaviour, IDropHandler
 {
+    public PopUp popup; 
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -13,8 +14,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             eventData.pointerDrag.GetComponent<DragDrop>().enabled = false;
-
+            popup.ItemDropped();
         }
     }
-
 }
